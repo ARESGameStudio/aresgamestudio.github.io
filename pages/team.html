@@ -1,0 +1,17 @@
+---
+title: Team
+permalink: /team/
+---
+
+<h1>Meet the team</h1>
+
+<ul>
+  {% for member in site.members %}
+    <li>
+      <h2><a href="{{ member.url }}">Codename: {{ member.codename }}</a></h2>
+      <h3>Real name: {{ member.real_name }}</h2>
+      <h3>Position: {{ member.position }}</h3>
+      <p>About: {{ member.content | markdownify }}</p>
+    </li>
+  {% endfor %}
+</ul>

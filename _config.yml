@@ -1,1 +1,25 @@
-remote_theme: agency-jekyll-theme 
+collections:
+  members:
+    output: true
+    permalink: /:collection/:name
+
+defaults:
+  - scope:
+      path: ""
+      type: "members"
+    values:
+      layout: "member"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
